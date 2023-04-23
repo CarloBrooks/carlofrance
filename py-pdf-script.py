@@ -2,7 +2,7 @@ from typing import Dict
 from PyPDF2 import PdfReader, PdfWriter
 
 # Load data from files
-with open("/Volumes/WD-Elements/Nadine-Dacoff/FileA.txt", "r") as file_a, open("/Volumes/WD-Elements/Nadine-Dacoff/FileB.txt", "r") as file_b:
+with open("/Volumes/WD-Elements/FileA.txt", "r") as file_a, open("/Volumes/WD-Elements/FileB.txt", "r") as file_b:
 	data_a = file_a.readlines()
 	data_b = file_b.readlines()
 
@@ -27,7 +27,7 @@ for old_key, old_name in old_field_names.items():
 			field_map[old_name] = new_key
 
 # Open PDF input and output files
-with open("/Volumes/WD-Elements/Nadine-Dacoff/I-485-Sup-A-Drop.pdf", "rb") as pdf_input_file, open("/Volumes/WD-Elements/Nadine-Dacoff/Updated-Supp-A5.pdf", "wb") as pdf_output_file:
+with open("/Volumes/WD-Elements/I-485-Sup-A-Drop.pdf", "rb") as pdf_input_file, open("/Volumes/WD-Elements/Updated-Supp-A5.pdf", "wb") as pdf_output_file:
 	pdf_reader = PdfReader(pdf_input_file)
 	pdf_writer = PdfWriter()
 	
